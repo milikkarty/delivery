@@ -1,9 +1,17 @@
+import { currencyData } from "../../data";
+
 const CurrencyFilter = () => {
     return (
         <div>
-            <button>UAH</button>
-            <button>USD</button>
-            <button>EUR</button>
+            {
+                currencyData.map(currency => (
+                    <button
+                        key={currency}
+                    >
+                        {currency}
+                    </button>
+                ))
+            }
         </div>
     )
 }
